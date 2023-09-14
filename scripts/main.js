@@ -1,3 +1,4 @@
+const scoreTitle = document.getElementById('score');
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -85,9 +86,7 @@ function updateGame() {
   drawSnake();
   drawFood();
 
-  ctx.fillStyle = 'white';
-  ctx.font = '20px Arial';
-  ctx.fillText('Score: ' + score, 10, 30);
+  scoreTitle.innerText = 'Score: ' + score;
 
   setTimeout(updateGame, 200);
 }
